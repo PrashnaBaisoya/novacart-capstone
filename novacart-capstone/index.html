@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaCart | Modern Tech & Desk Gear Store</title>
+  <meta name="description" content="Modular Single-Page E-Commerce Product Catalog with client-side routing, category filtering, and persistent shopping cart.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#app-view" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="NovaCart Home">Nova<span>Cart</span></a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" data-route="home">Home</a></li>
+          <li><a href="#catalog" data-route="catalog">Catalog</a></li>
+          <li>
+            <a href="#cart" data-route="cart" class="cart-link">
+              Cart <span id="nav-cart-count" class="cart-badge" aria-live="polite">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Dynamic Client-Side Router Mount Point -->
+  <main id="app-view" class="container main-view" tabindex="-1"></main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 NovaCart Capstone by Prashna Baisoya. Built with Modular ES6 &amp; Client-Side Routing.</p>
+      <a href="https://github.com/PrashnaBaisoya" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
